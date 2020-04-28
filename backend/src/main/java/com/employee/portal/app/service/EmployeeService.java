@@ -1,6 +1,6 @@
 package com.employee.portal.app.service;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,15 +20,11 @@ public class EmployeeService {
 	}
 	
 	public List<Employee> getAllEmployees(){
-		List<Employee> employees = repo.findAll();
-		Collections.sort(employees);
-		return employees;
+		return new ArrayList<Employee>();
 	}
 
 	public Long saveEmployee(Employee emp) {
-		emp = repo.save(emp);
-		return emp.getId();
+		return null;
 	}
-	
 
 }
