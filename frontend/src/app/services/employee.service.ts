@@ -7,7 +7,7 @@ import { Employee } from '../model/Bug';
 })
 export class EmployeeService {
 
-  private _url : string = "http://localhost:8080/"; 
+  private _url : string = "http://localhost:8080/api/"; 
 
   constructor(private _http: HttpClient) { }
 

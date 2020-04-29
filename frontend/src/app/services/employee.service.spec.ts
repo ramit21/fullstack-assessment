@@ -28,7 +28,7 @@ describe('EmployeeService', () => {
         done(); 
     });
     
-    let dataRequest = httpMock.expectOne('http://localhost:8080/employees');
+    let dataRequest = httpMock.expectOne('http://localhost:8080/api/employees');
     dataRequest.flush([{"id":4,"firstName":"Ciara","lastName":"Lavelle","gender":"F","dateOfJoining":"31/12/2014","dept":"HR"}]);
     httpMock.verify();
   });
@@ -41,7 +41,7 @@ describe('EmployeeService', () => {
         done(); 
     });
     
-    let dataRequest = httpMock.expectOne('http://localhost:8080/saveEmployee');
+    let dataRequest = httpMock.expectOne('http://localhost:8080/api/saveEmployee');
     dataRequest.flush(1);
     httpMock.verify();
   });
