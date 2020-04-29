@@ -1,14 +1,14 @@
 export class Employee {
     
     id : number;
-	firstName : string;
-	lastName : string;
-	gender : string;
-    dateOfJoining: string;
-    dept: string;
+	firstName : String;
+	lastName : String;
+	gender : String;
+    dateOfJoining: String;
+    dept: String;
 
-    constructor(id : number, firstName : string, lastName : string,
-            gender : string, dateOfJoining : string, dept : string){
+    constructor(id : number, firstName : String, lastName : String,
+            gender : String, dateOfJoining : String, dept : String){
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

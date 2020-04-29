@@ -1,1 +1,60 @@
-<p>employee works!</p>
+<p class="error">{{error}}</p>
+
+<h3>Employee Form:</h3>
+    <form>
+      <span class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" size="7" [(ngModel)]="firstName" />
+      </span>
+
+      <span class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" size="7" [(ngModel)]="lastName" />
+      </span>
+
+      <span class="form-group">
+        <label for="gender">Gender:</label>
+        <input type="text" name="gender" size="1" [(ngModel)]="gender" />
+      </span>
+
+      <span class="form-group">
+        <label for="doj">DOJ:</label>
+        <input type="text" name="doj" size="7" [(ngModel)]="doj" placeholder="dd/mm/yyyy"/>
+      </span>
+
+      <span class="form-group">
+        <label for="dept">Department:</label>
+        <input type="text" name="dept" size="7" [(ngModel)]="dept" />
+      </span>
+    
+      <button type="submit" class="btn btn-success" (click)="createEmployee()">Submit</button>
+
+    </form>
+
+<h3>
+    Employees:
+</h3>
+<table>
+    <tr>
+      <th *ngFor="let col of columns">
+        {{col}}
+      </th>
+    </tr>
+    <tr *ngFor="let employee of employees">
+      <td>
+        {{employee.firstName}}
+      </td>
+      <td>
+        {{employee.lastName}}
+      </td>
+      <td>
+        {{employee.gender}}
+      </td>
+      <td>
+        {{employee.dateOfJoining}}
+      </td>
+      <td>
+        {{employee.dept}}
+      </td>
+    </tr>
+</table>

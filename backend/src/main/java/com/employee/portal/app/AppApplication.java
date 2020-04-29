@@ -32,7 +32,7 @@ public class AppApplication {
 				emps.add(new Employee("Ciara", "Lavelle", "F", df.parse("1/1/2015"), "HR" ));
 				 
 				repo.saveAll(emps);
-				repo.findAll().forEach(e-> System.out.println(e));
+				//repo.findAll().forEach(e-> System.out.println(e));
 			}
 		};
 	}

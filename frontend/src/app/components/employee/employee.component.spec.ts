@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { EmployeeComponent } from './employee.component';
 import { EmployeeService } from '../../services/employee.service';
 import { Observable, of} from 'rxjs';
+import { FormsModule } from '@angular/forms';
 
 describe('EmployeeComponent', () => {
   let component: EmployeeComponent;
@@ -9,6 +10,7 @@ describe('EmployeeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ FormsModule ],
       declarations: [ EmployeeComponent ],
       providers: [ { provide: EmployeeService, useClass: FakeEmployeeService} ] 
     })
