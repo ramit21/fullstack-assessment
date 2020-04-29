@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { EmployeeComponent } from './employee.component';
+import { EmployeeService } from '../../services/employee.service';
+import { Observable, of} from 'rxjs';
 
 describe('EmployeeComponent', () => {
   let component: EmployeeComponent;
@@ -8,7 +9,8 @@ describe('EmployeeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EmployeeComponent ]
+      declarations: [ EmployeeComponent ],
+      providers: [ { provide: EmployeeService, useClass: FakeEmployeeService} ] 
     })
     .compileComponents();
   }));
@@ -23,3 +25,9 @@ describe('EmployeeComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+class FakeEmployeeService{
+    getEmployees():Observable<any>{
+      return of('');
+  }
+}

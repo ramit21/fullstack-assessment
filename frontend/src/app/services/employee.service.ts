@@ -12,7 +12,7 @@ export class EmployeeService {
   constructor(private _http: HttpClient) { }
 
   getEmployees(){
-    return this._http.get(this._url+'employees');
+    return this._http.get<Employee[]>(this._url+'employees');
   }
 
   saveEmployee(employee: Employee){
