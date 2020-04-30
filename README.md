@@ -12,3 +12,5 @@ Steps to run the project:
 Frontend: localhost:4200
 
 Backend: localhost:8080
+
+Swagger url: http://localhost:8080/swagger-ui.html
