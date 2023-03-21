@@ -14,3 +14,7 @@ Frontend: localhost:4200
 Backend: localhost:8080
 
 Swagger url: http://localhost:8080/swagger-ui.html
+
+TODO:
+
+Improvement areas: define problem statement, proxy instead of cors, backend - validations, exception handling (Advice based ErrorHandler), Lombok plugin, Java 8 syntax, Transaction handling.
